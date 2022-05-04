@@ -14,10 +14,11 @@ export const findOneMovie = (req, res) => {
 };
 
 export const addMovie = (req, res) => {
-  const { title, rating, year, desc } = req.body;
+  const { title, genere, rating, year, desc } = req.body;
   movies.push({
     id: uuidv4(),
     title,
+    genere,
     rating,
     year,
     desc,
@@ -27,11 +28,12 @@ export const addMovie = (req, res) => {
 
 export const updateMovie = (req, res) => {
   const { id } = req.params;
-  const { title, rating, year, desc } = req.body;
+  const { title, genere, rating, year, desc } = req.body;
   movies
     .filter((movie) => movie.id === id)
     .map((selectedMovie) => {
       (selectedMovie.title = title),
+        (selectedMovie.genere = genere),
         (selectedMovie.rating = rating),
         (selectedMovie.year = year),
         (selectedMovie.desc = desc);
