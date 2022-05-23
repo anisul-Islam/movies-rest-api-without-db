@@ -4,9 +4,9 @@
 
 ### api link - https://movies-api2022.herokuapp.com/
 ### api routes
-- GET: /users
-- GET: /users/:id
-- POST: /users/
-- PUT: /users/:id
-- DELETE: /users/:id
+- GET: /api/movies
+- GET: /api/movies/:id
+- POST: /api/movies
+- PUT: /api/movies/:id
+- DELETE: /api/movies/:id
 
